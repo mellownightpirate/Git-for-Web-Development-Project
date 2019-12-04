@@ -1,0 +1,208 @@
+Link to codepen: https://codepen.io/amino/pen/abzbrPZ?editors=1100
+
+ 1. What is Semantic HTML? 
+
+Semantic HTML adds the underlying context/meaning (not content) to code. It makes websites more readable for computers to interpret. It's also used to help other developers collaborate on your code.
+
+    2. What is HTML used for?
+Hypertext Markup Language (HTML) is used for creating web pages and specifically laying out the content.
+ 
+    3. What is an attribute and where do we put it?
+An attribute can be things like colour, font size, or style.They go inside opening HTML tags to specify the element’s behaviour.
+ 
+    4. What is the h1 tag used for? How many times should I use it on a page?
+The h1 tag is used for titles or headers within a webpage and should really be used once although there isn't anything stopping you using it more than once. It would just confused any other collaborators. It's better to use h2-h6 tags if needed.
+
+    5. Name two tags that have required attributes
+Links use "href" attributes and images use "src" attributes.
+
+    6. What do we put in the head of our HTML document? 
+Metadata that contains information about a webpage. E.g. <base>, <link>, <style>, or <script> are used to describe metadata. They define characteristics, style, title and other relevant meta data.
+
+    7. What is an id?
+id is an attribute used to specify actions for a unique element. 
+
+    8. What elements can I add an id to? 
+ids can be used on any HTML element.
+
+    9. How many times can I use the same id on a page? 
+ids should be unique and not used more than once
+
+    10. What is a class?
+Class is an attribute used to specify elements with one or more class names. They can be used multiple times in a webpage.
+
+    11. What elements can I add a class to? 
+Classes can be used on any HTML element.
+
+    12. How many times can I use the same class on a page?
+You can have as many classes you want.
+ 
+    13. How do I get my link to open in a new tab?
+Use target attribute or anchor tag.
+
+    14. What is the alt attribute used for? 
+Alternate text for images in case the browser cannot display an image or the user is using a screen reader.
+
+    15. How do I reference an id?
+Id selector using # e.g #unique-element
+
+    16. What is the difference between a section and a div
+Divs are not semantic while a section indicates there is grouped content inside and is therefore semantic.
+
+    17. What is CSS used for?
+Css adds style and design to HTML elements on a webpage. E.g. colour, size, layouts, font styles/colours.
+ 
+    18. How to we select an element? Example - every h2 on the page
+
+h2 {
+ Font-size: 50px;
+}
+    19. What is the difference between a class and an id? - Give me an example of when I might use each one
+
+Id is more specific than class and only identifies one specified element. Therefore you might use it to style a particular paragraph which you want to override over other styled paragraphs. A class can be used many times and can identify more than one element. Therefore, you might use it to style paragraphs or sections.
+
+    20. How do we select classes in CSS?
+.Class {
+
+}
+
+    21. How do we select a p element with a single class of “human””?
+If <p class="human"></p> then, .human {
+
+}
+
+    22. What is a parent child selector? When would this be useful?
+A parent child selector selects elements that are direct "children" of the specified element and are useful when trying to style a specific element nested within another element.
+ 
+    23. How do you select all links within a div with the class of sidebar?
+If <div class="sidebar"></div> then, .sidebar {
+}
+
+    24. What is a pseudo selector?
+A keyword added to a selector that specifies a special state to a selected element e.g. :hover
+
+    25. What do we use the change the spacing between lines?
+Line-height property
+
+    26. What do we use to change the spacing between letters?
+Letter-spacing property
+
+    27. What do we use to to change everything to CAPITALS? lowercase? Capitalize?
+Text-transform property and capitalize and lowercase
+
+    28. How do I add a 1px border around my div that is dotted and black?
+1px dotted black
+
+    29. How do I select everything on the page?
+Universal selector (*) E.g. * {
+
+}
+ 
+    30. How do I write a comment in CSS?
+/* before the comment and */ after the comment
+
+    31. How do I find out what file I am in, when I am using the command line?
+pwd
+ 
+    32. Using the command line - how do I see a list of files/folders in my current folder?
+ls
+
+    33. How do I remove a file via the command line? Why do I have to be careful with this?
+rm. This is permanent so be careful.
+ 
+    34. Why should I use version control? 
+To keep track of changes. E.g. you can time travel back to a saved state to fix a mistake or work on a previous save state.
+
+    35. How often should I commit to github?
+You should commit meaningful changes e.g. when you add a new feature.
+
+    36. What is the command we would use to push our repo up to github?
+Git push
+ 
+    37. Walk me through Lambda's git flow.
+Fork project to own repo.
+Add TL as collaborator.
+Clone and copy URL.
+Then "git clone [URL]" in the command line.
+"git checkout -b firstName-lastName"
+"git add ." any changes.
+"git commit -m "leave a message"".
+"git push origin firstName-lastName".
+Submit pull request on GitHub comparing to own master branch.
+Add TL as reviewer.
+The TL can then review code and accept merge request to merge it back 
+to master.
+ 
+
+Stretch Questions
+
+    1. What is the difference between an inline element and a block element?
+Inline element does not start a new line and only takes up as much width as necessary e.g <a></a> or <img> vs. Block elements always start on a new line and take up the full width available e.g. <div></div> or <p></p>.
+
+    2. What happens when an element is positioned absolutely? 
+It is removed from the normal document flow and therefore has an automatic starting point of top-left of its parent element or the <html> document.
+
+    3. How do I make an element take up only the amount of space it needs but also have the ability to give it a width?
+You can use inline-block to set width and height or the box model to add height, padding, border and margin to an element.
+ 
+    4. Name 3 elements that are diplay block by default, 2 elements that are display inline by default and 1 element that is display inline-block by default
+
+Display block by default:
+1. <address></address>
+2. <p></p>
+3. <blockquote></blockquote>
+
+Display inline by default:
+1. <button></button>
+2. <span></span>
+3.<a></a>
+
+Inline-block by default:
+1. <select></select>
+
+    5. In your own words, explain the box model. What is the fix for the box model? 
+Where all HTML elements can be considered as boxes in terms of design and their layout. There are 5 spacing properties to use: height, width, padding, border, and margin.
+
+The box model is prone to tightly spaced elements which can constantly overlap each other and break the flow of the layout and therefore does not work well for responsive design. The fix is box-sizing: border-box.
+
+# Notes
+
+--
+
+# Merge Conflicts
+
+Merge conflicts happen when you merge branches that have competing commits, and Git needs your help to decide which changes to incorporate in the final merge. ... Usually, the changes are on different lines, or even in different files, which makes the merge simple for computers to understand.
+
+Conflicts can be solved by looking for any conflict markers in an editor, or going with one of the edited versions.
+
+--
+
+# Pull
+
+Git pull is a Git command used to update the local version of a repository from a remote.
+
+# Rebase
+
+The rebase command integrates changes from one branch into another. It is an alternative to the better known "merge" command. Most visibly, rebase differs from merge by rewriting the commit history in order to produce a straight, linear succession of commits.
+
+# Merge
+
+Merging is Git's way of putting a forked history back together again. The git merge command lets you take the independent lines of development created by git branch and integrate them into a single branch.
+
+--
+
+# Reset
+
+Git reset is a powerful command that is used to undo local changes to the state of a Git repo. Git reset operates on "The Three Trees of Git". These trees are the Commit History ( HEAD ), the Staging Index, and the Working Directory.
+
+# Revert
+
+The git revert command is a forward-moving undo operation that offers a safe method of undoing changes. Instead of deleting or orphaning commits in the commit history, a revert will create a new commit that inverses the changes specified. Git revert is a safer alternative to git reset in regards to losing work.
+
+# Clean
+
+Git clean is to some extent an 'undo' command. Git clean can be considered complementary to other commands like git reset and git checkout . Whereas these other commands operate on files previously added to the Git tracking index, the git clean command operates on untracked files.
+
+# Amend commit message without deleting last message
+
+git commit —amend  —no-edit
